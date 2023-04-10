@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*** index.html ***/
+
+#landing{
+    background-color: black;
+    /*font-family: proxima-nova,sans-serif;*/
+    font-family: 'Mulish', sans-serif;
+}
+
+.backgroundw{
+    height: 100vh;
+    background-image: url(../img/dino4k.jpg);
+    background-size: 95% ;
+    background-repeat: no-repeat;
+    background-position: center ;
+    filter: blur(3px);
+    transition: 1s;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    background-color: rgba(120,120,120, 0.6);
+}
+
+.container h1{
+    margin: 30px;
+    font-size: 3em;
+    color: rgb(220, 228, 5);
+}
+
+.button-continue{
+    font-size: 1.5rem;
+    width: 50%;
+    margin-bottom: 15px;
+    list-style: none;
+    background-color: transparent;
+    border-color: rgba(120, 120, 120, 0.7);
+    border-style: solid;
+    transition: 0.6s;
+    text-decoration:  none;
+    font-weight: bold;
+    letter-spacing: 10px;
+    color: #dce405;
+    transition: 0.6s;
+}
+
+/** HEADER **/
+
+header{
+    background-image: url(../img/fondo1.jpg);
+    transition: 0.4s;
+}
+
+.imglandinga img{
+    position: absolute;
+    margin: 20px 0 0 35px;
+    width: 5%;
+}
+
+.imglandingb img{
+    position: absolute;
+    margin: 20px 0 0 35px;
+    width: 5%;
+    opacity: 0;
+}
+
+ nav{
+    text-align: center;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 50px auto 40px auto; /* Aqui ajusto el espacio de cada opcion de lista que a su vez ajusta el tamaño del background header */
+    border: solid transparent;
+    transition: 0.5s;
+ }
+
+nav ul li a{
+    margin: auto 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    letter-spacing: 5px;
+    transition: 0.5s;
+}
+
+/** FOOTER **/
+
+footer{
+    background-image: url(../img/fondo1.jpg);
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    gap: 10px;
+
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 50px;
+}
+
+.icon img{
+    width: 80%;
+}
+
+.contact a{
+    display: flex;
+    justify-content: center;
+    margin: auto 45% 30px 45%;
+    text-decoration: none;
+}
+
+.contact h3{
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    transition: 0.5s;
+    border-bottom: transparent 2px solid;
+}
+
+/*** dinos.html ***/
+
+/** main dinos **/
+
+.bdino{
+    background-image: url(../img/planta8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dino{ 
+    max-width: 90%;
+    margin: 100px auto;
+}
+
+.grid{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr repeat(3, auto); /** auto = se ajustara al contenido de cada celda */
+    align-items: center;
+    justify-content: center;   
+    gap: 70px;
+}
+
+.box-summary{ /** formato de las celdas del grid */
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+}
+
+ .title{
+    display: flex;
+    justify-content: center;
+    margin: 0 25% ;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Mulish', sans-serif;
+    border-bottom: #10243c solid 3px;
+}
+
+.title img{
+    margin: auto 5px;
+}
+
+.box-summary h3{
+    position: absolute;
+    left: 620px;
+    font-family: 'Mulish', sans-serif;
+    color: #10243c;
+    border: #10243c solid 2px;
+    letter-spacing: 3px;
+    padding: 5px;
+    background-color: rgba(254, 231, 189, 0.3);
+}
+
+.box-summary img{
+    width: 70%;
+    box-shadow: -4px 2px 5px 7px rgba(0, 0, 0, 0.5)
+}
+
+.box-summary ul{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    border: black solid 1px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.box-summary ul li{
+    color: #10243c;
+    font-weight: bold;
+    list-style: none;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 2px;
+}
+
+.box-summary p{
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 45%;
+    text-align: justify;
+    background-color: rgba(16, 36, 60, 0.8);
+    padding: 5px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.box-summary audio{
+    margin: 10% 30% 10% 5%;
+}
+
+/*** galeria.html ***/
+
+/** main galeria **/
+
+.box-photo{
+    margin: 1rem ;
+    overflow: hidden; /* evita que los elementos fuera del ancho de la pagina se muestren */
+}
+
+.photo-list{
+    width: 45%; /** Aqui aumento el tamaño de imagen **/
+}
+
+.photo-list ul{   /** Coloca las imagenes juntas en horizontal y genera el espacio fuera de la fila*/
+    display: flex;
+    width: 420%;
+    animation: cambio 20s infinite; /** Se ajusta el tiempo de toda la transicion en 1 sentido de movimiento */
+    animation-direction: alternate;  
+    background-color: black;
+}
+
+.photo-list ul li{
+    width: 200%;
+    list-style: none;
+}
+
+.photo-list img{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+@keyframes cambio { /** el porcentaje es con respecto al tiempo que dura transicion y el negativo es con respecto a la dirección de desplazamiento de la imagen*/
+    0% {margin-left: -20;}
+    25% {margin-left: 0;}
+
+    36% {margin-left: -100%;}
+    67% {margin-left: -100%;}
+
+    78% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+.box-card{
+    margin-top: 5%;
+}
+
+.section-card{
+    display: flex; 
+    justify-content: space-around;
+    flex-flow: row wrap; 
+}
+
+.card{
+    width: 30%;
+    height: 300px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 30px;
+    background-size: cover; 
+    background-position: center; 
+}
+
+.section-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+/*** meteorito.html ***/
+
+
+.description{
+    justify-content: center;
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+}
+
+.description h2{
+    text-align: center;
+    margin: 5% 30%;
+    font-family: 'Mulish', sans-serif;
+    border: #10243c solid 2px;
+
+}
+
+.description p{
+    padding: 10px;
+    font-family: 'Mulish', sans-serif;
+    background-color: rgba(16, 36, 60, 0.8);
+    color: white;
+    letter-spacing: 2px;
+}
+
+.description iframe{
+    margin: 20px auto;
+    width: 100%;
+    height: 415px;
+}
+
+
+/*** contacto.html ***/
+
+.contact-fondo{
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -350px;
+}
+
+.box-form{
+    margin: 50px 10%;
+}
+
+.form-title{
+    text-align: center;
+    margin: 20px 40% 50px 40%;
+    font-family: 'Mulish', sans-serif;
+    border-bottom: #10243c solid 3px;
+}
+
+.form{
+    background-color: rgba(192, 192, 192, 0.3);
+    margin: 0 30% 100px 30%; 
+    padding: 3rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.form label{
+    font-weight: bold; /** peso de la letra */
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    height: 30px;
+    padding: 3px 10px; /** top-bottom - right-left */
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: block; /** los elementos se aplican uno abajo del otro */
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: block; /** los elementos se aplican uno abajo del otro */
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+    border: 1px solid #10243c;
+    background-color: #10243c;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color .6s;
+}
+
+
+/***** Pseudo clases index.html *****/
+
+.backgroundw:hover{
+    filter: blur(0);
+    transition: 1s ;
+}
+
+.button-continue:hover{
+    background: rgb(255,255,255);
+    background-color: #dce405; 
+    border-style: solid;
+    color: black;
+    transition: 0.6s;
+}
+
+
+/***** Pseudo clases HEADER *****/
+
+.imglandingb img:hover{
+    opacity: 1;
+}
+
+
+nav ul li:hover{
+    border-style: solid;
+    border-color: #dce405;
+}
+
+nav ul li a:hover{
+    color: #dce405;
+}
+
+/***** Pseudo clases FOOTER *****/
+
+.contact h3:hover{
+    color: #f5fd01;
+    border-bottom: #f5fd01 2px solid;
+}
+
+
+
+/*** Media Query ***/
+
+@media (max-width: 850px){
+    #landing{
+        overflow: hidden;
+    }
+
+    .backgroundw{
+        background-size: cover ;
+    }
+
+    .container{
+        width: 70%;
+        text-align: center;
+        left: 15%;
+    
+    }
+    
+    .container h1{
+        font-size: 1.5em;
+        margin: 10px;
+    }
+
+    .button-continue{
+        font-size: 0.8rem;
+        width: 50%;
+        margin-bottom: 15px;
+        letter-spacing: 5px;
+    }
+    
+
+    /* HEADER */
+    .imglandinga img{
+        position: absolute;
+        margin: 20px ;
+        width: 15%;
+    }
+
+    .imglandingb img{
+        position: absolute;
+        margin: 20px ;
+        width: 15%;
+        opacity: 0;
+    }
+    
+     nav{
+        width: auto;
+    }
+
+    nav ul{
+        padding: 0 20%;
+    }
+    
+    nav ul li{
+        margin: 10px auto 40px auto; /* Aqui ajusto el espacio de cada opcion de lista que a su vez ajusta el tamaño del background header */
+    }
+
+    nav ul li a{
+        margin: auto 30px;
+        font-size: 1.2rem;
+    }
+
+    /* dino */
+    .grid{ /** grid */
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr repeat(3, auto); /** auto = se ajustara al contenido de cada celda */
+        align-items: center;
+        justify-content: center;   
+        gap: 20px;
+    }
+    
+    .box-summary{ /** formato de las celdas del grid */
+        position: relative;
+        overflow: hidden;
+    }
+    
+     .title{
+        font-size: 0.8rem;
+    }
+
+    .box-summary img{
+        width: 100%;
+        margin-top: 45px;
+    }
+    
+    .box-summary h3{
+        left: 30%;
+        background-color: rgba(254, 231, 189, 0.8);
+        font-size: 1em;
+    }
+    
+    .box-summary ul{
+        position: relative;
+        top: 30%;
+        left: 0;
+        font-size: 0.8rem;
+    }
+
+    .box-summary p{
+        position: relative;
+        width: auto;
+        top: 49%;
+        left: 0;
+        font-size: 0.9em;
+    }
+    
+    .box-summary audio{
+        padding: 5px 40px 5px 0;
+    }
+    
+    .item1 {
+        order: 1;
+    }
+      
+    .item2 {
+        order: 5;
+    }
+    
+    .item3 {
+        order: 2;
+    }
+    
+    .item4 {
+        order: 6;
+    }
+    .item5{
+        order: 3;
+    }
+
+    .item6{
+        order: 7;
+    }
+
+    .item7{
+        order: 4;
+    }
+
+    .item8{
+        order: 8;
+    }
+
+    /* galeria */
+
+    .photo-list{
+        width: 100%;
+    }
+
+    .photo-list ul{
+        width: 550%;
+    }
+    
+    .photo-list ul li{
+        width: 500%;
+    }
+    
+    .photo-list img{
+        width: 100%;
+        
+    }
+
+    .seccion-card{
+        display: inline-block; 
+        text-align: center;
+    }
+
+    .card{
+        width: 80%;
+    }
+
+    /** meteorito **/
+
+    .description{
+        width: 90%;
+    }
+
+    .description h2{
+        margin: 15% auto;
+    }
+
+    /** contacto **/
+
+    .form-title{
+        margin: 30px auto;
+    }
+
+    .form{
+        margin: px auto;
+        padding: 5px;
+    }
+
+}
+
+
+/********************* pantallas mas grandes *************/ 
+
+
+@media (min-width: 851px) and (max-width:1800px){
+
+        /* dino */
+        .grid{ /** grid */
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr repeat(3, auto); /** auto = se ajustara al contenido de cada celda */
+            align-items: center;
+            justify-content: center;   
+            gap: 20px;
+        }
+        
+        .box-summary{ /** formato de las celdas del grid */
+            position: relative;
+            overflow: hidden;
+            width: auto;
+            padding: 5%;
+        }
+        
+         .title{
+            font-size: 0.8rem;
+        }
+    
+        .box-summary img{
+            width: 50%;
+            margin-top: 45px;
+        }
+        
+        .box-summary h3{
+            left: 30%;
+            background-color: rgba(254, 231, 189, 0.8);
+            font-size: 1em;
+        }
+        
+        .box-summary ul{
+            margin: 10px 0;
+            position: relative;
+            width: 20%;
+            top: 30%;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    
+        .box-summary p{
+            margin: none;
+            position: relative;
+            width: 50%;
+            top: 49%;
+            left: 0;
+            font-size: 0.9em;
+        }
+        
+        .box-summary audio{
+            margin: 10% 0 5% 5%;
+            padding: 5px 40px 5px 0;
+        }
+        
+        .item1 {
+            order: 1;
+        }
+          
+        .item2 {
+            order: 5;
+        }
+        
+        .item3 {
+            order: 2;
+        }
+        
+        .item4 {
+            order: 6;
+        }
+        .item5{
+            order: 3;
+        }
+    
+        .item6{
+            order: 7;
+        }
+    
+        .item7{
+            order: 4;
+        }
+    
+        .item8{
+            order: 8;
+        }
+    
+}
